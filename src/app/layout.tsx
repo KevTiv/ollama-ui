@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import React from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,9 +22,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log("cookies", cookies().toString());
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>
+      <body className={`font-sans ${inter.variable} overflow-hidden`}>
         <TRPCReactProvider cookies={cookies().toString()}>
           {children}
         </TRPCReactProvider>
@@ -31,3 +33,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const dynamic = "force-static";
