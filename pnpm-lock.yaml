@@ -86,6 +86,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.3.5)
+  taurpc:
+    specifier: ^1.4.2
+    version: 1.4.2
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -121,9 +124,12 @@ devDependencies:
   eslint:
     specifier: ^8.54.0
     version: 8.54.0
+  eslint-config-prettier:
+    specifier: ^9.1.0
+    version: 9.1.0(eslint@8.54.0)
   eslint-plugin-prettier:
     specifier: ^5.0.1
-    version: 5.0.1(@types/eslint@8.44.8)(eslint@8.54.0)(prettier@3.1.0)
+    version: 5.0.1(@types/eslint@8.44.8)(eslint-config-prettier@9.1.0)(eslint@8.54.0)(prettier@3.1.0)
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -1895,6 +1901,14 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
+  /@tauri-apps/api@1.5.1:
+    resolution:
+      {
+        integrity: sha512-6unsZDOdlXTmauU3NhWhn+Cx0rODV+rvNvTdvolE5Kls5ybA6cqndQENDt1+FS0tF7ozCP66jwWoH6a5h90BrA==,
+      }
+    engines: { node: ">= 14.6.0", npm: ">= 6.6.0", yarn: ">= 1.19.1" }
+    dev: false
+
   /@tauri-apps/cli-darwin-arm64@1.5.7:
     resolution:
       {
@@ -2891,7 +2905,19 @@ packages:
     engines: { node: ">=10" }
     dev: true
 
-  /eslint-plugin-prettier@5.0.1(@types/eslint@8.44.8)(eslint@8.54.0)(prettier@3.1.0):
+  /eslint-config-prettier@9.1.0(eslint@8.54.0):
+    resolution:
+      {
+        integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==,
+      }
+    hasBin: true
+    peerDependencies:
+      eslint: ">=7.0.0"
+    dependencies:
+      eslint: 8.54.0
+    dev: true
+
+  /eslint-plugin-prettier@5.0.1(@types/eslint@8.44.8)(eslint-config-prettier@9.1.0)(eslint@8.54.0)(prettier@3.1.0):
     resolution:
       {
         integrity: sha512-m3u5RnR56asrwV/lDC4GHorlW75DsFfmUcjfCYylTUs85dBRnB7VM6xG8eCMJdeDRnppzmxZVf1GEPJvl1JmNg==,
@@ -2910,6 +2936,7 @@ packages:
     dependencies:
       "@types/eslint": 8.44.8
       eslint: 8.54.0
+      eslint-config-prettier: 9.1.0(eslint@8.54.0)
       prettier: 3.1.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.6
@@ -5053,6 +5080,15 @@ packages:
       sucrase: 3.34.0
     transitivePeerDependencies:
       - ts-node
+
+  /taurpc@1.4.2:
+    resolution:
+      {
+        integrity: sha512-iVnQ+sJIOm0CEgRiEGAjB6XZDSFGKGkKNhxIYSnPW2Ci5XTCc1pR5Wu3gy4Rlz1p9L9v+51Kh3s1GJQzusmoNQ==,
+      }
+    dependencies:
+      "@tauri-apps/api": 1.5.1
+    dev: false
 
   /text-table@0.2.0:
     resolution:
