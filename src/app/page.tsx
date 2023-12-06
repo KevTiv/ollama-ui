@@ -23,7 +23,7 @@ export default async function Home() {
 
   return (
     //   bg-gradient-to-b from-[#2e026d] to-[#15162c]
-    <main className="flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#2e026d] to-[#15162c] px-2">
+    <main className="flex min-h-screen flex-col items-center justify-center overflow-hidden px-2">
       <div className="container flex w-screen flex-1 overflow-hidden pr-8">
         <ChatHistory />
         <div
@@ -53,13 +53,7 @@ export default async function Home() {
             </div>
             <ConversationCanvas />
           </div>
-          <div
-            className={
-              "container flex min-h-[10vh] w-full items-center justify-around gap-4 px-4"
-            }
-          >
-            <UserInputs />
-          </div>
+          <UserInputs />
         </div>
       </div>
     </main>

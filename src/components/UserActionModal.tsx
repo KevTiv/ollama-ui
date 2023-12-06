@@ -11,7 +11,7 @@ function UserActionModal() {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <Button className={"h-16 w-16"} onClick={() => console.log("hello")}>
+        <Button className={"h-14 w-14"} onClick={() => console.log("hello")}>
           <PlusCircle />
         </Button>
       </Dialog.Trigger>

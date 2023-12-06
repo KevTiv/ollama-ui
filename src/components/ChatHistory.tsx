@@ -61,8 +61,8 @@ function ChatHistory() {
                 "my-1 border-transparent hover:bg-accent-foreground hover:text-white",
               ],
               selectedContext.includes(index)
-                ? "bg-accent-foreground text-white"
-                : "bg-white/90",
+                ? "bg-accent-foreground/90 text-white"
+                : "bg-white/80",
             )}
             onClick={() => updateSelectedContext(index)}
           >

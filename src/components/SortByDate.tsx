@@ -21,12 +21,14 @@ function SortByDate() {
         <Button
           variant={"outline"}
           className={cn(
-            "w-[280px] justify-start text-left font-normal",
+            "w-1/8 flex items-center justify-center text-left font-normal lg:w-full",
             !date && "text-muted-foreground",
           )}
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, "PPP") : <span>Pick a date</span>}
+          <CalendarIcon className="mr-2 h-4 w-4 translate-x-1/4" />
+          <span className={"hidden w-0 lg:flex lg:w-full"}>
+            {date ? format(date, "PPP") : "Pick a date"}
+          </span>
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">
